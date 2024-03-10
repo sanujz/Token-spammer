@@ -213,10 +213,3 @@ client55.on('messageCreate', message => {
 });
 
 client55.login(token55);
-
-
-client.on("error", (err) => {
-  console.error(err); // or your preferred logger
-});
-
-client.connect(); // Get the bot to connect to Discord
