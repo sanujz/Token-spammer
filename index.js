@@ -1,4 +1,4 @@
-const client = require('discord.js-selfbot-v13');
+const { Client } = require('discord.js-selfbot-v13');
 const Discord = require('discord.js-selfbot-v13');
 const keep_alive = require('./keep_alive.js')
 
