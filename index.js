@@ -4,24 +4,6 @@ const keep_alive = require('./keep_alive.js')
 
 const prefix = "addreact";
 
-// Replace TOKEN with your bot account's token
-const client53 = new Discord.Client();
-const client54 = new Discord.Client();
-const client55 = new Discord.Client();
-
-const client = new Client({
-	checkUpdate: false
-});
-const authorizedUsers = new Map();
-
-client.commands = new Discord.Collection();
-const commands = fs.readdirSync("./Commands").filter(file => file.endsWith(".js"));
-for (file of commands) {
-  const commandName = file.split(".")[0]
-  const command = require(`./Commands/${commandName}`)
-  client.commands.set(commandName, command)
-}
-
 const token53 = 'MTIxNTY2NTAxNDUxODg0MTQ1NQ.GjQTgj.POjz8TsfPAwThDrlDAA13z_iacxoVdCXvg-2cw';
 const token54 = 'MTIxNTY2NTY0OTMxODEwMTA3NA.GmKFV5.z_zWqplazsIf-01wwWd4lA18-FUOpWkcn6eGLg';
 const token55 = 'MTIxNTY2NjQxNTE4MTIzODI3Mg.GRGzX8.n5GADWdAYh8ITDeioX77N3yoVOTmQX9RCcRLtg';
