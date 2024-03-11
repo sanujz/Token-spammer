@@ -1555,7 +1555,7 @@ client34.on('messageCreate', (message) => {
   }
 });
 
-client34.login(token34);
+client34.login(process.env.token34);
 
 client35.on("messageCreate", (message) => {
   if (message.content.startsWith("*spam")) 
