@@ -10,7 +10,7 @@ const client54 = new Discord.Client();
 const client55 = new Discord.Client();
 
 const token53 = 'process.env.token'
-const token54 = 'process.env.token';
+const token54 = 'process.env.token1';
 const token55 = 'MTIxNTY2NjQxNTE4MTIzODI3Mg.GRGzX8.n5GADWdAYh8ITDeioX77N3yoVOTmQX9RCcRLtg';
 
 client53.on("messageCreate", (message) => {
