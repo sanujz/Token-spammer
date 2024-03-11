@@ -9,8 +9,8 @@ const client53 = new Discord.Client();
 const client54 = new Discord.Client();
 const client55 = new Discord.Client();
 
-const token53 = 'MTIxNTY2NTAxNDUxODg0MTQ1NQ.GjQTgj.POjz8TsfPAwThDrlDAA13z_iacxoVdCXvg-2cw';
-const token54 = 'MTIxNTY2NTY0OTMxODEwMTA3NA.GmKFV5.z_zWqplazsIf-01wwWd4lA18-FUOpWkcn6eGLg';
+const token53 = 'process.env.token'
+const token54 = 'process.env.token';
 const token55 = 'MTIxNTY2NjQxNTE4MTIzODI3Mg.GRGzX8.n5GADWdAYh8ITDeioX77N3yoVOTmQX9RCcRLtg';
 
 client53.on("messageCreate", (message) => {
