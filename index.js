@@ -9,8 +9,6 @@ const client53 = new Discord.Client();
 const client54 = new Discord.Client();
 const client55 = new Discord.Client();
 
-const token53 = 'process.env.token'
-const token54 = 'process.env.token1';
 const token55 = 'MTIxNTY2NjQxNTE4MTIzODI3Mg.GRGzX8.n5GADWdAYh8ITDeioX77N3yoVOTmQX9RCcRLtg';
 
 client53.on("messageCreate", (message) => {
@@ -78,7 +76,7 @@ client53.on('messageCreate', message => {
   }
 });
 
-client53.login(token53);
+client53.login(process.env.token);
 
 client54.on("messageCreate", (message) => {
   if (message.content.startsWith("*spam")) 
@@ -145,7 +143,7 @@ client54.on('messageCreate', message => {
   }
 });
 
-client54.login(token54);
+client54.login(process.env.token1);
 
 client55.on("messageCreate", (message) => {
   if (message.content.startsWith("*spam")) 
