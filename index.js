@@ -55,6 +55,11 @@ const client52 = new Discord.Client();
 const client53 = new Discord.Client();
 const client54 = new Discord.Client();
 const client55 = new Discord.Client();
+const client56 = new Discord.Client();
+const client57 = new Discord.Client();
+const client58 = new Discord.Client();
+const client59 = new Discord.Client();
+const client60 = new Discord.Client();
 
 client1.on("messageCreate", (message) => {
   if (message.content.startsWith("*spam")) 
@@ -2741,3 +2746,338 @@ client55.on('messageCreate', message => {
 });
 
 client55.login(process.env.token55);
+
+client56.on("messageCreate", (message) => {
+  if (message.content.startsWith("*spam")) 
+  if (message.author.id === '869229454927462400') {
+    const args = message.content.slice("*spam".length).trim().split(" ");
+    const text = args.slice(0, args.length - 1).join(" ");
+    const amount = parseInt(args[args.length - 1]);
+
+    if (!isNaN(amount) && text) {
+      for (let i = 0; i < amount; i++) {
+        message.channel.send(text);
+      }
+    } else {
+      message.channel.send("Invalid command! Usage: *spam <text> <amount>");
+    }
+  }
+});
+
+client56.on('messageCreate', (message) => {
+  const desiredUserID = '869229454927462400'; // The desired user ID
+
+  if (message.content.startsWith('react') && message.author.id === desiredUserID) {
+    const args = message.content.slice('react '.length).trim().split(' ');
+    const emoji = args[0];
+    const amount = parseInt(args[1]);
+
+    // React to the desired number of messages
+    message.channel.messages.fetch({ limit: amount })
+      .then((messages) => {
+        messages.forEach((msg) => {
+          // React with the specified emoji
+          msg.react(emoji)
+            .catch(console.error);
+        });
+      })
+      .catch(console.error);
+  }
+});
+
+client56.on('messageCreate', message => {
+  // Check if the message starts with 'addreact' and if the message author is you
+  if (message.content.startsWith('addreact') && message.author.id === '869229454927462400') {
+    const args = message.content.slice('addreact'.length).trim().split(/ +/);
+    const user = message.mentions.users.first();
+    const emoji = args[1];
+    const amount = parseInt(args[2]);
+
+    if (!user || !emoji || isNaN(amount)) {
+      return message.reply('Please provide a valid user, emoji, and amount of messages.');
+    }
+
+    const filter = m => m.author.id === user.id;
+    const collector = message.channel.createMessageCollector({ filter, time: 150000, max: amount });
+
+    collector.on('collect', (m, col) => {
+      m.react(emoji)
+        .then(() => console.log(`Reacted with ${emoji}`))
+        .catch(console.error);
+    });
+
+    collector.on('end', col => {
+      console.log(`Collected ${col.size} messages for ${user.tag}.`);
+    });
+  }
+});
+
+client56.login(process.env.token56);
+
+client57.on("messageCreate", (message) => {
+  if (message.content.startsWith("*spam")) 
+  if (message.author.id === '869229454927462400') {
+    const args = message.content.slice("*spam".length).trim().split(" ");
+    const text = args.slice(0, args.length - 1).join(" ");
+    const amount = parseInt(args[args.length - 1]);
+
+    if (!isNaN(amount) && text) {
+      for (let i = 0; i < amount; i++) {
+        message.channel.send(text);
+      }
+    } else {
+      message.channel.send("Invalid command! Usage: *spam <text> <amount>");
+    }
+  }
+});
+
+client57.on('messageCreate', (message) => {
+  const desiredUserID = '869229454927462400'; // The desired user ID
+
+  if (message.content.startsWith('react') && message.author.id === desiredUserID) {
+    const args = message.content.slice('react '.length).trim().split(' ');
+    const emoji = args[0];
+    const amount = parseInt(args[1]);
+
+    // React to the desired number of messages
+    message.channel.messages.fetch({ limit: amount })
+      .then((messages) => {
+        messages.forEach((msg) => {
+          // React with the specified emoji
+          msg.react(emoji)
+            .catch(console.error);
+        });
+      })
+      .catch(console.error);
+  }
+});
+
+client57.on('messageCreate', message => {
+  // Check if the message starts with 'addreact' and if the message author is you
+  if (message.content.startsWith('addreact') && message.author.id === '869229454927462400') {
+    const args = message.content.slice('addreact'.length).trim().split(/ +/);
+    const user = message.mentions.users.first();
+    const emoji = args[1];
+    const amount = parseInt(args[2]);
+
+    if (!user || !emoji || isNaN(amount)) {
+      return message.reply('Please provide a valid user, emoji, and amount of messages.');
+    }
+
+    const filter = m => m.author.id === user.id;
+    const collector = message.channel.createMessageCollector({ filter, time: 150000, max: amount });
+
+    collector.on('collect', (m, col) => {
+      m.react(emoji)
+        .then(() => console.log(`Reacted with ${emoji}`))
+        .catch(console.error);
+    });
+
+    collector.on('end', col => {
+      console.log(`Collected ${col.size} messages for ${user.tag}.`);
+    });
+  }
+});
+
+client57.login(process.env.token57);
+
+client58.on("messageCreate", (message) => {
+  if (message.content.startsWith("*spam")) 
+  if (message.author.id === '869229454927462400') {
+    const args = message.content.slice("*spam".length).trim().split(" ");
+    const text = args.slice(0, args.length - 1).join(" ");
+    const amount = parseInt(args[args.length - 1]);
+
+    if (!isNaN(amount) && text) {
+      for (let i = 0; i < amount; i++) {
+        message.channel.send(text);
+      }
+    } else {
+      message.channel.send("Invalid command! Usage: *spam <text> <amount>");
+    }
+  }
+});
+
+client58.on('messageCreate', (message) => {
+  const desiredUserID = '869229454927462400'; // The desired user ID
+
+  if (message.content.startsWith('react') && message.author.id === desiredUserID) {
+    const args = message.content.slice('react '.length).trim().split(' ');
+    const emoji = args[0];
+    const amount = parseInt(args[1]);
+
+    // React to the desired number of messages
+    message.channel.messages.fetch({ limit: amount })
+      .then((messages) => {
+        messages.forEach((msg) => {
+          // React with the specified emoji
+          msg.react(emoji)
+            .catch(console.error);
+        });
+      })
+      .catch(console.error);
+  }
+});
+
+client58.on('messageCreate', message => {
+  // Check if the message starts with 'addreact' and if the message author is you
+  if (message.content.startsWith('addreact') && message.author.id === '869229454927462400') {
+    const args = message.content.slice('addreact'.length).trim().split(/ +/);
+    const user = message.mentions.users.first();
+    const emoji = args[1];
+    const amount = parseInt(args[2]);
+
+    if (!user || !emoji || isNaN(amount)) {
+      return message.reply('Please provide a valid user, emoji, and amount of messages.');
+    }
+
+    const filter = m => m.author.id === user.id;
+    const collector = message.channel.createMessageCollector({ filter, time: 150000, max: amount });
+
+    collector.on('collect', (m, col) => {
+      m.react(emoji)
+        .then(() => console.log(`Reacted with ${emoji}`))
+        .catch(console.error);
+    });
+
+    collector.on('end', col => {
+      console.log(`Collected ${col.size} messages for ${user.tag}.`);
+    });
+  }
+});
+
+client58.login(process.env.token58);
+
+client59.on("messageCreate", (message) => {
+  if (message.content.startsWith("*spam")) 
+  if (message.author.id === '869229454927462400') {
+    const args = message.content.slice("*spam".length).trim().split(" ");
+    const text = args.slice(0, args.length - 1).join(" ");
+    const amount = parseInt(args[args.length - 1]);
+
+    if (!isNaN(amount) && text) {
+      for (let i = 0; i < amount; i++) {
+        message.channel.send(text);
+      }
+    } else {
+      message.channel.send("Invalid command! Usage: *spam <text> <amount>");
+    }
+  }
+});
+
+client59.on('messageCreate', (message) => {
+  const desiredUserID = '869229454927462400'; // The desired user ID
+
+  if (message.content.startsWith('react') && message.author.id === desiredUserID) {
+    const args = message.content.slice('react '.length).trim().split(' ');
+    const emoji = args[0];
+    const amount = parseInt(args[1]);
+
+    // React to the desired number of messages
+    message.channel.messages.fetch({ limit: amount })
+      .then((messages) => {
+        messages.forEach((msg) => {
+          // React with the specified emoji
+          msg.react(emoji)
+            .catch(console.error);
+        });
+      })
+      .catch(console.error);
+  }
+});
+
+client59.on('messageCreate', message => {
+  // Check if the message starts with 'addreact' and if the message author is you
+  if (message.content.startsWith('addreact') && message.author.id === '869229454927462400') {
+    const args = message.content.slice('addreact'.length).trim().split(/ +/);
+    const user = message.mentions.users.first();
+    const emoji = args[1];
+    const amount = parseInt(args[2]);
+
+    if (!user || !emoji || isNaN(amount)) {
+      return message.reply('Please provide a valid user, emoji, and amount of messages.');
+    }
+
+    const filter = m => m.author.id === user.id;
+    const collector = message.channel.createMessageCollector({ filter, time: 150000, max: amount });
+
+    collector.on('collect', (m, col) => {
+      m.react(emoji)
+        .then(() => console.log(`Reacted with ${emoji}`))
+        .catch(console.error);
+    });
+
+    collector.on('end', col => {
+      console.log(`Collected ${col.size} messages for ${user.tag}.`);
+    });
+  }
+});
+
+client59.login(process.env.token59);
+
+client60.on("messageCreate", (message) => {
+  if (message.content.startsWith("*spam")) 
+  if (message.author.id === '869229454927462400') {
+    const args = message.content.slice("*spam".length).trim().split(" ");
+    const text = args.slice(0, args.length - 1).join(" ");
+    const amount = parseInt(args[args.length - 1]);
+
+    if (!isNaN(amount) && text) {
+      for (let i = 0; i < amount; i++) {
+        message.channel.send(text);
+      }
+    } else {
+      message.channel.send("Invalid command! Usage: *spam <text> <amount>");
+    }
+  }
+});
+
+client60.on('messageCreate', (message) => {
+  const desiredUserID = '869229454927462400'; // The desired user ID
+
+  if (message.content.startsWith('react') && message.author.id === desiredUserID) {
+    const args = message.content.slice('react '.length).trim().split(' ');
+    const emoji = args[0];
+    const amount = parseInt(args[1]);
+
+    // React to the desired number of messages
+    message.channel.messages.fetch({ limit: amount })
+      .then((messages) => {
+        messages.forEach((msg) => {
+          // React with the specified emoji
+          msg.react(emoji)
+            .catch(console.error);
+        });
+      })
+      .catch(console.error);
+  }
+});
+
+client60.on('messageCreate', message => {
+  // Check if the message starts with 'addreact' and if the message author is you
+  if (message.content.startsWith('addreact') && message.author.id === '869229454927462400') {
+    const args = message.content.slice('addreact'.length).trim().split(/ +/);
+    const user = message.mentions.users.first();
+    const emoji = args[1];
+    const amount = parseInt(args[2]);
+
+    if (!user || !emoji || isNaN(amount)) {
+      return message.reply('Please provide a valid user, emoji, and amount of messages.');
+    }
+
+    const filter = m => m.author.id === user.id;
+    const collector = message.channel.createMessageCollector({ filter, time: 150000, max: amount });
+
+    collector.on('collect', (m, col) => {
+      m.react(emoji)
+        .then(() => console.log(`Reacted with ${emoji}`))
+        .catch(console.error);
+    });
+
+    collector.on('end', col => {
+      console.log(`Collected ${col.size} messages for ${user.tag}.`);
+    });
+  }
+});
+
+client60.login(process.env.token60);
