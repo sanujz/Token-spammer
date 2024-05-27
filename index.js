@@ -4,7 +4,6 @@ const keep_alive = require('./keep_alive.js')
 
 const prefix = "addreact";
 
-
 const client1 = new Discord.Client();
 const client2 = new Discord.Client();
 const client3 = new Discord.Client();
